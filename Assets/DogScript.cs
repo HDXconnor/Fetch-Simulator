@@ -2,15 +2,15 @@
 using System.Collections;
 
 public class DogScript : MonoBehaviour {
-	
+
 	public GameObject target;
 	public GameObject human;
-	
+
 	NavMeshAgent agent;
 	enum States {WAIT, FETCH, RETURN};
 	int currentState;
 	int count;
-	
+
 	// Use this for initialization
 	void Start () {
 		Cursor.lockState = CursorLockMode.Locked;
@@ -44,7 +44,7 @@ public class DogScript : MonoBehaviour {
 			agent.destination = transform.position;
 		}
 	}
-	
+
 	void Fetch(){
 		if(Mathf.Abs((transform.position - target.transform.position).magnitude) < 2){
 			agent.destination = human.transform.position;
@@ -58,11 +58,17 @@ public class DogScript : MonoBehaviour {
 		if(Mathf.Abs((transform.position - human.transform.position).magnitude) < 2){
 			currentState = (int)States.WAIT;
 			count++;
+
+			//send a message saying that the bone has been returned
+			human.SendMessage("onReturn");
+
 			if(count%3 == 0){
 				int num = Application.loadedLevel + 2;
 				Application.LoadLevel("level"+num);
 			}
 		} else {
+			//hold the bone above the dog as its walking back
+			target.transform.position = transform.position + new Vector3(0, 2, 0);
 			agent.destination = human.transform.position;
 		}
 	}
