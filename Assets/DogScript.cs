@@ -2,17 +2,19 @@
 using System.Collections;
 
 public class DogScript : MonoBehaviour {
-
+	
 	public GameObject target;
 	public GameObject human;
-
+	
 	NavMeshAgent agent;
 	enum States {WAIT, FETCH, RETURN};
 	int currentState;
 	int count;
-
+	
 	// Use this for initialization
 	void Start () {
+		Cursor.lockState = CursorLockMode.Locked;
+		Cursor.visible = false;
 		agent = GetComponent<NavMeshAgent>();
 		currentState = (int)States.WAIT;
 		count = 0;
@@ -20,6 +22,9 @@ public class DogScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		if (Input.GetKeyDown (KeyCode.F2)) {
+			Application.LoadLevel("level1");
+		}
 		if(currentState == (int)States.WAIT){
 			Wait();
 		} else if(currentState == (int)States.FETCH){
@@ -39,7 +44,7 @@ public class DogScript : MonoBehaviour {
 			agent.destination = transform.position;
 		}
 	}
-
+	
 	void Fetch(){
 		if(Mathf.Abs((transform.position - target.transform.position).magnitude) < 2){
 			agent.destination = human.transform.position;
