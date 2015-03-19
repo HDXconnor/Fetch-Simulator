@@ -5,7 +5,7 @@
 	<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
 	<ProductVersion>10.0.20506</ProductVersion>
 	<SchemaVersion>2.0</SchemaVersion>
-	<ProjectGuid>{59C70BD5-D47D-6B9E-E906-BC0F46BEC8A1}</ProjectGuid>
+	<ProjectGuid>{39EF36A0-89D7-8BB9-F315-1D44A9BB6875}</ProjectGuid>
 	<OutputType>Library</OutputType>
 	<AppDesignerFolder>Properties</AppDesignerFolder>
 	<RootNamespace></RootNamespace>
@@ -47,9 +47,17 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\DogScript.cs" />
+<<<<<<< HEAD
      <None Include="Assets\Standard Assets\Vehicles\Car\Shaders\DiffuseReflectiveShader.shader" />
      <None Include="Assets\Standard Assets\Vehicles\Car\Shaders\ReflectiveDiffuseSpecTransp.shader" />
      <None Include="Assets\Standard Assets\Vehicles\Car\Shaders\ReflectiveDiffuseSpec.shader" />
+=======
+<<<<<<< Updated upstream
+     <Compile Include="Assets\ThrowScript.cs" />
+=======
+     <Compile Include="Assets\ScoreManager.cs" />
+>>>>>>> Stashed changes
+>>>>>>> origin/master
      <None Include="Assets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
      <None Include="Assets\Standard Assets\Vehicles\Car\CarGuidelines.txt" />
      <None Include="Assets\Standard Assets\Characters\FirstPersonCharacter\FirstPersonCharacterGuidelines.txt" />
@@ -59,7 +67,11 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
+<<<<<<< HEAD
       <Project>{761ED4C3-8867-8CBE-3AF8-3D16387858B6}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
+=======
+      <Project>{5CD29B5B-7FB9-D3F8-FFF5-76BF4FFE7935}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
+>>>>>>> origin/master
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -5,7 +5,7 @@
 	<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
 	<ProductVersion>10.0.20506</ProductVersion>
 	<SchemaVersion>2.0</SchemaVersion>
-	<ProjectGuid>{1463BCA7-5074-319A-A516-073B4A08153E}</ProjectGuid>
+	<ProjectGuid>{8A98D5E2-D207-CBE2-4A9C-5B5F9DCBFCBE}</ProjectGuid>
 	<OutputType>Library</OutputType>
 	<AppDesignerFolder>Properties</AppDesignerFolder>
 	<RootNamespace></RootNamespace>
@@ -89,9 +89,15 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass-vs.csproj">
+<<<<<<< HEAD
       <Project>{761ED4C3-8867-8CBE-3AF8-3D16387858B6}</Project>      <Name>Assembly-CSharp-firstpass-vs</Name>    </ProjectReference>
     <ProjectReference Include="Assembly-CSharp-vs.csproj">
       <Project>{59C70BD5-D47D-6B9E-E906-BC0F46BEC8A1}</Project>      <Name>Assembly-CSharp-vs</Name>    </ProjectReference>
+=======
+      <Project>{5CD29B5B-7FB9-D3F8-FFF5-76BF4FFE7935}</Project>      <Name>Assembly-CSharp-firstpass-vs</Name>    </ProjectReference>
+    <ProjectReference Include="Assembly-CSharp-vs.csproj">
+      <Project>{39EF36A0-89D7-8BB9-F315-1D44A9BB6875}</Project>      <Name>Assembly-CSharp-vs</Name>    </ProjectReference>
+>>>>>>> origin/master
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -1,30 +1,28 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+
 public class DogScript : MonoBehaviour {
-	
-	public GameObject target;
-	public GameObject human;
-	
-	NavMeshAgent agent;
-	enum States {WAIT, FETCH, RETURN};
-	int currentState;
-	int count;
-	
-	// Use this for initialization
+	private NavMeshAgent agent;
+	private enum States {WAIT, FETCH, RETURN};
+	private int currentState, throwCount;
+	public GameObject target, human;
+
 	void Start () {
 		Cursor.lockState = CursorLockMode.Locked;
 		Cursor.visible = false;
+
 		agent = GetComponent<NavMeshAgent>();
 		currentState = (int)States.WAIT;
-		count = 0;
+		throwCount = 0;
+
 	}
-	
-	// Update is called once per frame
+
 	void Update () {
 		if (Input.GetKeyDown (KeyCode.F2)) {
-			Application.LoadLevel("level1");
+			RestartGame();
 		}
+
 		if(currentState == (int)States.WAIT){
 			Wait();
 		} else if(currentState == (int)States.FETCH){
@@ -35,7 +33,7 @@ public class DogScript : MonoBehaviour {
 	}
 	
 	void Wait(){
-		if(Input.GetKeyDown("f")){
+		if(Input.GetKeyDown(KeyCode.F)){
 			agent.destination = target.transform.position;
 			currentState = (int)States.FETCH;
 		} else if(Mathf.Abs((transform.position - human.transform.position).magnitude) > 2){
@@ -57,13 +55,23 @@ public class DogScript : MonoBehaviour {
 	void Return(){
 		if(Mathf.Abs((transform.position - human.transform.position).magnitude) < 2){
 			currentState = (int)States.WAIT;
-			count++;
-			if(count%3 == 0){
+			throwCount++;
+
+			//send a message saying that the bone has been returned
+			human.SendMessage("onReturn");
+
+			if(throwCount%3 == 0){
 				int num = Application.loadedLevel + 2;
 				Application.LoadLevel("level"+num);
 			}
 		} else {
+			//hold the bone above the dog as its walking back
+			target.transform.position = transform.position + new Vector3(0, 2, 0);
 			agent.destination = human.transform.position;
 		}
+	}
+
+	void RestartGame(){
+		Application.LoadLevel("level1");
 	}
 }

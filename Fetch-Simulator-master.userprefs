@@ -1,0 +1,15 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace />
+  <MonoDevelop.Ide.Workbench ActiveDocument="..\Steering\Assets\Scripts\PopulatorScript.cs">
+    <Files>
+      <File FileName="Assets\ThrowScript.cs" Line="30" Column="43" />
+      <File FileName="Assets\DogScript.cs" Line="27" Column="4" />
+      <File FileName="..\Steering\Assets\Scripts\PauseScript.cs" Line="23" Column="5" />
+      <File FileName="..\Steering\Assets\Scripts\PopulatorScript.cs" Line="1" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
