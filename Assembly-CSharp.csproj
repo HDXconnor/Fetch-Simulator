@@ -47,7 +47,11 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\DogScript.cs" />
+<<<<<<< Updated upstream
      <Compile Include="Assets\ThrowScript.cs" />
+=======
+     <Compile Include="Assets\ScoreManager.cs" />
+>>>>>>> Stashed changes
      <None Include="Assets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
      <None Include="Assets\Standard Assets\Characters\FirstPersonCharacter\FirstPersonCharacterGuidelines.txt" />
  <Reference Include="UnityEngine.UI">
