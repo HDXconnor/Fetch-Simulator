@@ -5,7 +5,7 @@
 	<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
 	<ProductVersion>10.0.20506</ProductVersion>
 	<SchemaVersion>2.0</SchemaVersion>
-	<ProjectGuid>{59C70BD5-D47D-6B9E-E906-BC0F46BEC8A1}</ProjectGuid>
+	<ProjectGuid>{4BFA971C-B376-5700-7C13-226A11932A81}</ProjectGuid>
 	<OutputType>Library</OutputType>
 	<AppDesignerFolder>Properties</AppDesignerFolder>
 	<RootNamespace></RootNamespace>
@@ -46,22 +46,26 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\DogScript.cs" />
-     <Compile Include="Assets\ScoreManager.cs" />
-     <Compile Include="Assets\ThrowScript.cs" />
+     <Compile Include="Assets\Scripts\DogScript.cs" />
+     <Compile Include="Assets\Scripts\ScoreManager.cs" />
+     <Compile Include="Assets\Scripts\ThrowScript.cs" />
      <None Include="Assets\Standard Assets\Vehicles\Car\Shaders\DiffuseReflectiveShader.shader" />
      <None Include="Assets\Standard Assets\Vehicles\Car\Shaders\ReflectiveDiffuseSpecTransp.shader" />
+     <None Include="Assets\Standard Assets\ParticleSystems\Shaders\PriorityParticleAlpha.shader" />
      <None Include="Assets\Standard Assets\Vehicles\Car\Shaders\ReflectiveDiffuseSpec.shader" />
+     <None Include="Assets\Standard Assets\ParticleSystems\ParticleSystemsGuidelines.txt" />
      <None Include="Assets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
+     <None Include="Assets\Standard Assets\ParticleSystems\Shaders\PriorityParticleAddSoft.shader" />
      <None Include="Assets\Standard Assets\Vehicles\Car\CarGuidelines.txt" />
      <None Include="Assets\Standard Assets\Characters\FirstPersonCharacter\FirstPersonCharacterGuidelines.txt" />
+     <None Include="Assets\Standard Assets\ParticleSystems\Shaders\PriorityParticleAdd.shader" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass-vs.csproj">
-      <Project>{761ED4C3-8867-8CBE-3AF8-3D16387858B6}</Project>      <Name>Assembly-CSharp-firstpass-vs</Name>    </ProjectReference>
+      <Project>{FF8FC212-730A-0501-B070-E0F82F7A6858}</Project>      <Name>Assembly-CSharp-firstpass-vs</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
